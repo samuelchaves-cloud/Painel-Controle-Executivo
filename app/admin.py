@@ -25,7 +25,7 @@ from.models import Visita
 
 @admin.register(Visita)
 class visitaadmin(admin.ModelAdmin):
-    list_display = ('cliente','arquiteto','data_visita','TIPO_IMOVEL')
+    list_display = ('cliente','arquiteto','data_visita','status')
     search_fields = ['cliente']
 
 from.models import Obra

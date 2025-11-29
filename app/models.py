@@ -46,8 +46,12 @@ class Visita(models.Model):
     status = models.CharField(max_length=20, choices=STATUS)
     observacoes = models.TextField(blank=True)
 
+    ##def __str__(self):
+    ##    return self.nome
     def __str__(self):
-        return self.nome
+        return f"Visita em {self.local} - {self.status}"
+
+
 
 class Obra(models.Model):
     Obra = models.CharField(max_length=500 , default="ADCIONE O NOME DA OBRA")
